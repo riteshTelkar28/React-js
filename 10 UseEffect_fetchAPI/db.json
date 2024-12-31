@@ -1,0 +1,25 @@
+{
+  "profile": [
+    {
+      "id": "1194",
+      "userName": "andrew",
+      "email": "andrew@gmail.com",
+      "password": "123",
+      "address": "indore"
+    },
+    {
+      "id": "cc68",
+      "userName": "peter",
+      "email": "peter@gmail.com",
+      "password": "123",
+      "address": "indore"
+    },
+    {
+      "id": "1eea",
+      "userName": "jack",
+      "email": "jack@gmail.com",
+      "password": "123",
+      "address": "indore"
+    }
+  ]
+}

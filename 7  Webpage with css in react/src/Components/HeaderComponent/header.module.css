@@ -1,0 +1,12 @@
+.header{
+    height: 97px;
+    background-color: white;
+}
+
+.headerHeading{
+    font-size: 37px;
+    font-weight: bold;
+    font-family: candara;
+    position: absolute;
+    margin-top: 34px;
+}

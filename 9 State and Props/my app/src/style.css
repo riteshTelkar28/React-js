@@ -1,0 +1,26 @@
+#leftdiv{
+    background-color: black;
+    height: 490px;
+    width: 30%;
+    float: left;
+}
+
+#rightdiv{
+    background-color: darkslategray;
+    height: 490px;
+    width: 70%;
+    float: left;
+}
+
+input{
+    margin: 5px;
+    height: 25px;
+    width: 250px;
+    font-family: candara;
+    font-size: 16px;
+}
+
+input[type="submit"]{
+    width: 260px;
+    height: 25px;
+}

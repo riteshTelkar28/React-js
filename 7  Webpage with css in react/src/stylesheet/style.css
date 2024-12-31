@@ -1,0 +1,352 @@
+*{
+    margin: 0;
+}
+#container{
+    height: auto;
+    width: 90%;
+    margin: auto;
+}
+
+#banner{
+    height: 491px;
+    background-color: green;
+}
+
+#banner img{
+    width:100% ;
+    height: 490px;
+}
+
+#mqdemo{
+    font-family: candara;
+    font-size: 22px;
+    color: darkslategray;
+    background-color: whitesmoke;
+    padding: 10px;
+}
+
+#contentarea{
+    height: 280px;
+    background-color: whitesmoke;
+    padding: 30px;
+}
+
+#contentheading{
+    font-size: 30px;
+    font-family: candara;
+    font-weight: bold;
+    margin: 30px;
+}
+
+#content{
+    margin-top: 30px;
+    font-size: 17px;
+    font-family: candara;
+}
+
+#items{
+    height: 420px;
+    background-color: whitesmoke;
+    padding: 30px;
+    margin-top: 30px;
+}
+
+#box{
+    height: 320px;
+    width: 265px;
+    float: left;
+    background-color:white;
+    margin: 10px;
+    margin-left: 12px;
+    margin-top: 35px;
+}
+
+#boximg{
+    height: 240px;
+    width: 265px;
+    border-radius: 50px 0px 50px 0px;
+    box-shadow: 1px 1px 10px  2px;
+}
+
+
+
+#plusbtn{
+    border: 0px;
+    background-color: green;
+    color: white;
+    height: 26px;
+    width: 26px;
+    border-radius: 50%;
+    margin-left: 16px;
+    margin-top: 5px;
+}
+
+#minusbtn{
+    border: 0px;
+    background-color: green;
+    color: white;
+    height: 26px;
+    width: 26px;
+    border-radius: 50%;
+    margin-top: 5px;
+}
+
+#boxinput{
+    height: 26px;
+    border-width: 0px;
+    font-size: 13px;
+    font-weight: bolder;
+    background-color: white;
+}
+
+#boxinput::placeholder{
+    color: black;
+}
+#cartid{
+    color: white;
+    background-color:red;
+    width: 90%;
+    border-width: 0px;
+    margin-left: 14px;
+    margin-top: 13px;
+    height: 30px;
+}
+
+#newsletter{
+    height: 150px;
+    padding: 30px;
+    background-color:goldenrod;
+}
+
+#submitmail{
+    margin-top: 30px;
+    height: 45px;
+    width: 500px;
+    font-size: 19px;
+    font-family: candara;
+    text-align: center;
+    outline: 0px;
+    margin-left: 200px;
+}
+
+#submitbtn{
+    height: 50px;
+    width: 200px;
+    font-size: 19px;
+    font-family: candara;
+    background-color: red;
+    color: black;
+    border: 0px;
+    font-weight: bold;
+    margin-left: -3.8px;
+}
+
+#about{
+    height: 500px;
+    background-color: whitesmoke;
+    padding: 20px;
+}
+
+#about1{
+    height: 300px;
+    width: 300px;
+    border-radius: 50%;
+    background-color:white;
+    float: left;
+    margin: 10px;
+    margin-top: 20px;
+}
+
+#about2{
+    height: 280px;
+    width: 770px;
+    background-color: white;
+    text-align: justify;
+    padding: 15px;
+    float: left;
+    margin: 10px;
+    margin-top: 20px;
+    font-family: candara;
+    font-weight: 19px;
+}
+
+#aboutimg{
+    height: 300px;
+    width: 300px;
+    border-radius: 50%;
+
+}
+
+#contact{
+    height: 420px;
+    padding: 30px;
+}
+
+#contact1{
+    height: 280px;
+    width: 180px;
+    font-size: 20px;
+    font-family: candara;
+    background-color: whitesmoke;
+    float: left;
+    margin: 5px;
+    padding: 10px;
+}
+
+#contact2{
+    height: 280px;
+    width: 270px;
+    float: left;
+    padding: 10px;
+    margin: 5px;
+    font-size: 20px;
+    font-family: candara;
+    background-color: whitesmoke;
+}
+
+#contact3{
+    height: 280px;
+    width: 368px;
+    background-color: white;
+    float: left;
+    padding: 10px;
+    margin: 5px;
+    padding-left: 0px;
+    /* padding-top: 0px; */
+    font-size: 20px;
+    font-family: candara;
+    background-color: whitesmoke;
+
+}
+
+#contact1 ul li a{
+    text-decoration: none;
+    color: black;
+    line-height: 35px;
+}
+
+#footer{
+    height: 20px;
+    font-family: candara;
+    padding: 5px;
+    background-color: whitesmoke;
+    font-size: 19px;
+}
+
+#gallerySection{
+    height: 800px;
+    background-color: whitesmoke;
+    padding: 20px;
+    overflow: hidden;
+}
+
+#gallery{
+    height: 300px;
+    width: 300px;
+    border-radius: 50%;
+    float: left;
+    margin: 30px;
+    margin-left: 38px;
+}
+
+#galleryimg{
+    height: 300px;
+    width: 300px;
+    border-radius: 50%;
+    background-color:white;
+    float: left;
+    margin: 10px;
+    margin-top: 20px;
+}
+
+#galleryimg:hover{
+    transform: scale(1.1);
+}
+
+#discount{
+    font-size: 24px;
+    margin-left: 20px;
+    animation-name: myanimation;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+}
+@keyframes myanimation {
+ 0%{
+    color: white;
+ }
+ 25%{
+    color: red;
+ }
+ 50%{
+    color: green;
+ }
+ 75%{
+    color: yellow;
+ }
+ 100%{
+    color: white;
+ }
+ 
+}
+
+#section{
+    height: 460px;
+}
+
+#loginbox{
+    background-color: whitesmoke;
+    width: 500px;
+    padding: 30px;
+    font-family: candara;
+    position: absolute  ;
+    margin: auto;
+    margin-top: 50px;
+    margin-left: 320px;
+}
+
+#sectionheading{
+    padding: 10px;
+    background-color: goldenrod;
+    color: white;
+    font-size: 30px;
+    font-family: candara;
+    font-weight: bolder;
+    width: 400px;
+    margin-left: 40px;
+}
+
+#logininput{
+    width: 410px;
+    margin: 7px;
+    height: 30px;
+    margin-left: 40px;
+    font-family: candara;
+    font-size: 19px;
+    text-align: center;
+    border-width: 0;
+    outline: 0;
+}
+
+#loginbutton{
+    
+    width: 410px;
+    margin: 7px;
+    height: 30px;
+    margin-left: 40px;
+    font-family: candara;
+    font-size: 19px;
+    text-align: center;
+    border-width: 0;
+    outline: 0;
+    background-color: gray;
+}
+
+#section #loginbox a{
+    color: black;
+    text-decoration: none;
+}
+
+#section #loginbox a:hover{
+    color: black;
+}
+
