@@ -1,0 +1,144 @@
+<%- include('./homeHeader.ejs') %>
+<body>
+  <div class="container mt-5">
+    <div class="row justify-content-center">
+      <div class="col-md-6">
+        <div class="card shadow">
+          <div class="card-header bg-primary text-white text-center">
+            <h3>User Registration</h3>
+          </div>
+          <div class="card-body">
+            <%= message %>
+            <form action="/user/register" method="POST">
+              <!-- Name -->
+              <div class="mb-3">
+                <label for="name" class="form-label">Full Name</label>
+                <input type="text" id="name" name="name" class="form-control" required>
+              </div>
+
+              <!-- Email -->
+              <div class="mb-3">
+                <label for="email" class="form-label">Email Address</label>
+                <input type="email" id="email" name="email" class="form-control" required>
+              </div>
+
+              <!-- Password -->
+              <div class="mb-3">
+                <label for="password" class="form-label">Password</label>
+                <input type="password" id="password" name="password" class="form-control" required>
+              </div>
+
+              <!-- Phone Number -->
+              <div class="mb-3">
+                <label for="phone" class="form-label">Phone Number</label>
+                <input type="text" id="phoneNumber" name="phoneNumber" class="form-control" required>
+              </div>
+
+              <!-- Vegetarian/Non-Vegetarian -->
+              <div class="mb-3">
+                <label class="form-label">Dietary Preference</label>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" id="vegetarian" name="diet" value="Vegetarian" required>
+                  <label class="form-check-label" for="vegetarian">Vegetarian</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" id="nonVegetarian" name="diet" value="Non-Vegetarian" required>
+                  <label class="form-check-label" for="nonVegetarian">Non-Vegetarian</label>
+                </div>
+              </div>
+
+              <!-- Age -->
+              <div class="mb-3">
+                <label for="age" class="form-label">Age</label>
+                <input type="number" id="age" name="age" class="form-control" required>
+              </div>
+
+              <!-- Address -->
+              <div class="mb-3">
+                <label for="address" class="form-label">Address</label>
+                <textarea id="address" name="address" class="form-control" rows="3" required></textarea>
+              </div>
+
+              <!-- Submit Button -->
+              <div class="d-grid">
+                <button type="submit" class="btn btn-primary">Register</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="/js/registration.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const form = document.querySelector("form");
+  
+      form.addEventListener("submit", function (event) {
+        let isValid = true;
+        let messages = [];
+  
+        const name = document.getElementById("name").value.trim();
+        const email = document.getElementById("email").value.trim();
+        const password = document.getElementById("password").value.trim();
+        const phoneNumber = document.getElementById("phoneNumber").value.trim();
+        const age = document.getElementById("age").value.trim();
+        const address = document.getElementById("address").value.trim();
+        const dietChecked = document.querySelector('input[name="diet"]:checked');
+  
+        // Name validation
+        if (name.length < 3) {
+          messages.push("Full Name must be at least 3 characters.");
+          isValid = false;
+        }
+  
+        // Email validation
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailRegex.test(email)) {
+          messages.push("Enter a valid email address.");
+          isValid = false;
+        }
+  
+        // Password validation (at least 8 chars, one uppercase, one lowercase, one digit, one special character)
+        const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
+        if (!passwordRegex.test(password)) {
+          messages.push("Password must be at least 8 characters, include one uppercase letter, one lowercase letter, one number, and one special character.");
+          isValid = false;
+        }
+  
+        // Phone number validation (must be 10 digits and start with 6-9)
+        const phoneRegex = /^[6-9]\d{9}$/;
+        if (!phoneRegex.test(phoneNumber)) {
+          messages.push("Enter a valid 10-digit phone number starting with 6-9.");
+          isValid = false;
+        }
+  
+        // Age validation
+        if (isNaN(age) || age < 18) {
+          messages.push("Age must be 18 or older.");
+          isValid = false;
+        }
+  
+        // Address validation
+        if (address.length < 10) {
+          messages.push("Address must be at least 10 characters.");
+          isValid = false;
+        }
+  
+        // Dietary preference validation
+        if (!dietChecked) {
+          messages.push("Please select a dietary preference.");
+          isValid = false;
+        }
+  
+        // Display error messages and prevent form submission if invalid
+        if (!isValid) {
+          event.preventDefault();
+          alert(messages.join("\n"));
+        }
+      });
+    });
+  </script>
+  

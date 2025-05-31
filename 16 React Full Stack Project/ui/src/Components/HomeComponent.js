@@ -1,0 +1,68 @@
+import "bootstrap/dist/css/bootstrap.min.css";
+import "bootstrap/dist/js/bootstrap.min.js";
+import freshSalad from '../images/fresh-salad.jpeg'
+import cheeseBurger from '../images/cheese-burger.jpeg'
+import pizza from '../images/peproni pizza.jpeg'
+
+function HomeComponent(){
+    return(
+        <>
+  <header class="hero bg-dark text-light text-center">
+    <div class="container py-5">
+      <h1 class="display-4">Delicious Food Delivered to You</h1>
+      <p class="lead">Order your favorite meals and get them delivered fast and fresh!</p>
+      <a href="#menu" class="btn btn-primary btn-lg">Explore Menu</a>
+    </div>
+  </header>
+
+  <section id="menu" class="py-5 bg-light">
+    <div class="container">
+      <h2 class="text-center mb-4">Our Popular Dishes</h2>
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="card">
+            <img src={cheeseBurger} class="card-img-top" alt="Burger"/>
+            <div class="card-body">
+              <h5 class="card-title">Cheeseburger</h5>
+              <p class="card-text">Juicy and cheesy, the perfect comfort food.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card">
+            <img src={pizza} class="card-img-top" alt="Pizza"/>
+            <div class="card-body">
+              <h5 class="card-title">Pepperoni Pizza</h5>
+              <p class="card-text">Classic Italian pizza with a spicy twist.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card">
+            <img src={freshSalad} class="card-img-top" alt="Salad"/>
+            <div class="card-body">
+              <h5 class="card-title">Fresh Salad</h5>
+              <p class="card-text">Healthy and refreshing with a zesty dressing.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" class="py-5">
+    <div class="container">
+      <h2 class="text-center mb-4">About Us</h2>
+      <p class="text-center">At FoodiesHub, we aim to bring delicious meals to your doorstep with just a few clicks. Our mission is to make food ordering easy, quick, and satisfying for everyone. Join us in this culinary journey!</p>
+    </div>
+  </section>
+
+  <footer class="bg-dark text-light text-center py-3">
+    <p>&copy; 2024 FoodiesHub. All Rights Reserved.</p>
+  </footer>
+
+        </>
+    )
+}
+
+export default HomeComponent;
